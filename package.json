@@ -1,6 +1,6 @@
 {
   "name": "cordova-plugin-vungle",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Vungle ads for Apache Cordova",
   "cordova": {
     "id": "cordova-plugin-vungle",
