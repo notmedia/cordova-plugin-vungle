@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns=""
+        id="cordova-plugin-vungle" version="0.1.1">
+    <name>Vungle Plugin</name>
+    <description>Cordova Vungle Plugin</description>
+    <license>Apache-2.0</license>
+    <keywords>cordova,vungle</keywords>
+    <js-module src="www/Vungle.js" name="Vungle">
+        <clobbers target="window.Vungle" />
+    </js-module>
+    <engines>
+        <engine name="cordova" version=">=1.7.0" />
+        <engine name="cordova-ios" version=">=4.3.0" />
+    </engines>
+    <platform name="ios">
+        <config-file target="config.xml" parent="/*">
+            <feature name="VunglePlugin">
+                <param name="ios-package" value="VunglePlugin"/>
+            </feature>
+        </config-file>
+        <header-file src="src/ios/VunglePlugin.h" />
+        <source-file src="src/ios/VunglePlugin.m" />
+        <framework src="AdSupport.framework"/>
+        <framework src="AudioToolbox.framework"/>
+        <framework src="AVFoundation.framework"/>
+        <framework src="CFNetwork.framework"/>
+        <framework src="CoreGraphics.framework"/>
+        <framework src="CoreMedia.framework"/>
+        <framework src="Foundation.framework"/>
+        <framework src="libsqlite3.0.tbd"/>
+        <framework src="libz.tbd"/>
+        <framework src="MediaPlayer.framework"/>
+        <framework src="QuartzCore.framework"/>
+        <framework src="StoreKit.framework"/>
+        <framework src="SystemConfiguration.framework"/>
+        <framework src="UIKit.framework" />
+        <framework src="WebKit.framework"/>               
+    </platform>
+</plugin>
