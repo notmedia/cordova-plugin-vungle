@@ -2,9 +2,11 @@
   "name": "cordova-plugin-vungle",
   "version": "1.0.0",
   "description": "Vungle ads for Apache Cordova",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "cordova": {
+    "id": "cordova-plugin-vungle",
+    "platforms": [
+      "ios"
+    ]
   },
   "repository": {
     "type": "git",

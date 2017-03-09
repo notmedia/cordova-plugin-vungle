@@ -9,8 +9,7 @@
 - (void) setup:(CDVInvokedUrlCommand *)command {
     adPlayable = false;
     Vungle = [VungleSDK sharedSDK];
-    [[VungleSDK sharedSDK] setDelegate:self];
-    //Turn on logging mode
+    [[VungleSDK sharedSDK] setDelegate:self];    
     [Vungle setLoggingEnabled: [[command.arguments objectAtIndex:0] boolValue]];
     [Vungle startWithAppId: [command.arguments objectAtIndex:1]];
     
@@ -27,7 +26,7 @@
     }
     else{
         CDVPluginResult* pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_ERROR
-                                                          messageAsString: @"Vungle: Ad can not be blayed."];
+                                                          messageAsString: @"Vungle: Ad can not be played."];
         [self.commandDelegate sendPluginResult:pluginResult callbackId:command.callbackId];
     }
 }
@@ -87,24 +86,18 @@
 }
 
 - (void)vungleSDKwillShowAd {
-    //    NSLog(@"An ad is about to be played!");
+    //NSLog(@"An ad is about to be played!");
     //Use this delegate method to pause animations, sound, etc.
 }
 
 - (void)vungleSDKwillCloseAdWithViewInfo:(NSDictionary *)viewInfo willPresentProductSheet:(BOOL)willPresentProductSheet {
-    //    NSLog(@"ViewInfo Dictionary:");
-    // viewInfo dictioanry contains completedView, playTime and didDownload information
-    //    // willPresentProductSheet always returns NO
-    //    for(NSString * key in [viewInfo allKeys]) {
-    //        NSLog(@"%@ : %@", key, [[viewInfo objectForKey:key] description]);
-    //    }
     CDVPluginResult* pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK
                                                   messageAsDictionary:viewInfo];
     [self.commandDelegate sendPluginResult:pluginResult callbackId:callbackId];
 }
 
 - (void)vungleSDKwillCloseProductSheet:(id)productSheet {
-    //    NSLog(@"The user has downloaded an advertised application and is now returning to the main app");
+    //NSLog(@"The user has downloaded an advertised application and is now returning to the main app");
     //This method can be used to resume animations, sound, etc. if a user was presented a product sheet earlier
 }
 
