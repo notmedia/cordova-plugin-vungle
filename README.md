@@ -7,4 +7,4 @@ The plugin.xml doesn't have ablity to put embedded frameworks to your project au
 
 IMPORTANT: The VungleSDK.embeddedframework folder should be added as a group (yellow folder) and not as a reference (blue folder).
 
-<img src="https://raw.githubusercontent.com/notmedia/cordova-plugin-vungle/master/docs/ios.gif">
+![add framework to the iOS project](https://support.vungle.com/hc/en-us/article_attachments/202186160/addFrameworkFolder.gif)
