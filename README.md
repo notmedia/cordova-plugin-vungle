@@ -18,16 +18,16 @@ IMPORTANT: The VungleSDK.embeddedframework folder should be added as a group (ye
 # Methods
 
 #### Vungle.setup(success_callback, error_callback, debugMode, appID) 
-Initial method wich connect to Vungle. 
-(boolean) debugMode - if set to true you could see debug output from Vungle SDK. 
-(string) appID - the appID of your app in Vungle Dashboard. 
+Initial method wich connect to Vungle.  
+(boolean) debugMode - if set to true you could see debug output from Vungle SDK.  
+(string) appID - the appID of your app in Vungle Dashboard.
 
 #### Vungle.requestAd(success_callback, error_callback) 
 When success callback was emitted you can show an ad. 
 
 #### Vungle.showAdWithOptions(success_callback, error_callback, options)
-Calling this method will show an ad. 
-Success callback returns info about the view. 
+Calling this method will show an ad.  
+Success callback returns info about the view.  
 Options is an object of Vungle options, defined [here](https://support.vungle.com/hc/en-us/articles/204463080-Advanced-Settings-for-Vungle-iOS-SDK) in "Customized Ad Experience" section.
 
 # Example
@@ -58,3 +58,5 @@ Vungle.setup(() => {
 }, true, appID);
 
 ```
+
+[![paypal](https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=QVU9KQVD2VZML)
